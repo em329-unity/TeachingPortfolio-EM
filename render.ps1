@@ -42,8 +42,28 @@ function Render-And-Move($inputPath, $targetPath) {
     Write-Host "Moved generated HTML to $targetPath" -ForegroundColor Green
 }
 
-# Render homepage to root index.html
-Render-And-Move "Quarto Files/index.qmd" "index.html"
+# Render homepage to Pages/index.html
+Render-And-Move "Quarto Files/index.qmd" "Pages/index.html"
+
+# Ensure a root redirect exists that points to Pages/index.html
+$redirect = @"
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="refresh" content="0; url=Pages/index.html">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Redirecting…</title>
+        <link rel="canonical" href="Pages/index.html">
+    </head>
+    <body>
+        <p>Redirecting to the site: <a href="Pages/index.html">Open site</a>.</p>
+    </body>
+</html>
+"@
+
+Set-Content -Path "index.html" -Value $redirect -Force
+Write-Host "Created root redirect index.html -> Pages/index.html" -ForegroundColor Green
 
 # Render other pages into Pages folder
 Render-And-Move "Quarto Files/about-me.qmd" "Pages/about-me.html"
