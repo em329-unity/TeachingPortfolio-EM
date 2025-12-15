@@ -36,7 +36,7 @@
 /* Paper-like page frame: resemble 8.5"x11" letter paper on screen */
 .container.paper-frame{
   /* use viewport-based sizing: make the sheet 60% of viewport width on larger screens */
-  width:60vw;
+  width:90vw;
   max-width:none;
   min-height:11in;
   margin:5vh auto; /* space around the "sheet" */
