@@ -32,4 +32,8 @@ Contact: your.email@example.com
 Notes:
 - The `render.ps1` script will check that `quarto` is available and will render the homepage to `index.html` in the project root and all other pages into the `Pages/` folder.
 
+Note about homepage location (updated):
+- The rendered homepage now lives at `Pages/index.html`. The project includes a small root `index.html` that redirects users to `Pages/index.html` so the site remains reachable from the project root.
+- When you run `render.ps1` it will render the homepage to `Pages/index.html` and recreate the root redirect `index.html` automatically.
+
 Contact: your.email@example.com

@@ -11,3 +11,9 @@ Disclaimer:
 2. Additionally, please do not share this content with others, without prior conset. This material is still in development and I would like 
 to properly process resources under a creative commons license before publicly releasing. 
 3. The material is still under review, and feedback is appreciated (Contact information available on the site)
+
+---
+
+Quarto Rendering Note:
+- The rendered homepage now lives at `Pages/index.html`. A small root `index.html` file redirects to `Pages/index.html` so the site remains reachable from the project root.
+- Running the included `render.ps1` will render the homepage into `Pages/index.html` and recreate the root redirect `index.html` automatically.
