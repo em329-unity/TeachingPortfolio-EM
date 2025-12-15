@@ -35,7 +35,7 @@
 
 /* Paper-like page frame: resemble 8.5"x11" letter paper on screen */
 .container.paper-frame{
-  width: 60vw; /* span ~90% of the viewport */
+  width: 80vw; /* span ~90% of the viewport */
   max-width: calc(100% - 32px); /* keep small margins on narrow screens */
   min-height: 11in;
   margin: 5vh auto;
