@@ -9,4 +9,4 @@ This is a sample assignment to show assessment design and instructions for stude
 
 **Assignment:** Write a 2-3 page reflection connecting course readings to a classroom scenario.
 
-[Back to Home](../index.html)
+[Back to Home](index.html)

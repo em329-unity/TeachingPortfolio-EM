@@ -13,6 +13,12 @@ Hello — welcome to my teaching portfolio. Use the navigation to find out about
 - [Mock Syllabus](Pages/mock-syllabus.html)
 - [Mock Lesson Plan](Pages/mock-lesson-plan.html)
 - [Resume](Pages/resume.html)
+ - [About Me](about-me.html)
+ - [Teaching Philosophy](teaching-philosophy.html)
+ - [Mock Assignment](mock-assignment.html)
+ - [Mock Syllabus](mock-syllabus.html)
+ - [Mock Lesson Plan](mock-lesson-plan.html)
+ - [Resume](resume.html)
 
 ---
 

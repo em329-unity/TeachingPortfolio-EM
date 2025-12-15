@@ -7,4 +7,4 @@ format: html
 
 A brief mock syllabus with course objectives, weekly topics, assessments, and policies.
 
-[Back to Home](../index.html)
+[Back to Home](index.html)

@@ -7,4 +7,4 @@ format: html
 
 This lesson plan includes learning objectives, materials, activities, and assessment strategies.
 
-[Back to Home](../index.html)
+[Back to Home](index.html)

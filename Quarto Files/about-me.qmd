@@ -10,4 +10,4 @@ I am a dedicated educator with interests in curriculum design, student-centered 
 - Education: PhD / MA in Education
 - Interests: Instructional design, assessment, technology in education
 
-[Back to Home](../index.html)
+[Back to Home](index.html)

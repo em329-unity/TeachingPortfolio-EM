@@ -11,4 +11,4 @@ Here is a short mock resume summary.
 
 **Experience:** Teaching roles, curriculum design, research.
 
-[Back to Home](../index.html)
+[Back to Home](index.html)

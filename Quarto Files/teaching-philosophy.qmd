@@ -7,4 +7,4 @@ format: html
 
 My teaching philosophy centers on active learning, formative assessment, and creating equitable learning environments.
 
-[Back to Home](../index.html)
+[Back to Home](index.html)
