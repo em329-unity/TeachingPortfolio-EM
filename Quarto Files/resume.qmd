@@ -1,0 +1,14 @@
+---
+title: "Resume"
+format: html
+---
+
+# Resume
+
+Here is a short mock resume summary.
+
+**Name:** Melaku Example
+
+**Experience:** Teaching roles, curriculum design, research.
+
+[Back to Home](../index.html)

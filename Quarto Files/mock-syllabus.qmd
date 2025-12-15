@@ -1,0 +1,10 @@
+---
+title: "Mock Syllabus"
+format: html
+---
+
+# Mock Syllabus
+
+A brief mock syllabus with course objectives, weekly topics, assessments, and policies.
+
+[Back to Home](../index.html)

@@ -1,0 +1,21 @@
+project:
+  type: website
+
+website:
+  title: "Melaku Teaching Portfolio"
+  navbar:
+    right:
+      - text: "Home"
+        href: "index.html"
+      - text: "About Me"
+        href: "Pages/about-me.html"
+      - text: "Teaching Philosophy"
+        href: "Pages/teaching-philosophy.html"
+      - text: "Mock Assignment"
+        href: "Pages/mock-assignment.html"
+      - text: "Mock Syllabus"
+        href: "Pages/mock-syllabus.html"
+      - text: "Mock Lesson Plan"
+        href: "Pages/mock-lesson-plan.html"
+      - text: "Resume"
+        href: "Pages/resume.html"
