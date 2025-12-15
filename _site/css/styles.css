@@ -35,18 +35,16 @@
 
 /* Paper-like page frame: resemble 8.5"x11" letter paper on screen */
 .container.paper-frame{
-  /* use viewport-based sizing: make the sheet 60% of viewport width on larger screens */
-  width:90vw;
-  max-width:none;
-  min-height:11in;
-  margin:5vh auto; /* space around the "sheet" */
-  padding:1in 0.9in; /* typical page margin */
-  background:var(--card); /* keep page white */
-  /* rounded up for clarity: use 6px on-screen for a strong paper edge */
-  border:6px solid rgba(106,13,30,0.08); /* screen border */
-  box-shadow:0 12px 36px rgba(16,24,40,0.08), inset 0 1px 0 rgba(255,255,255,0.7);
-  box-sizing:border-box;
-  border-radius:6px;
+  width: 60vw; /* span ~90% of the viewport */
+  max-width: calc(100% - 32px); /* keep small margins on narrow screens */
+  min-height: 11in;
+  margin: 5vh auto;
+  padding: 1in 0.9in;
+  background: var(--card);
+  border: 6px solid rgba(106,13,30,0.08);
+  box-shadow: 0 12px 36px rgba(16,24,40,0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+  box-sizing: border-box;
+  border-radius: 6px;
 }
 
 /* If .paper-frame isn't added to the page wrapper, this gives pages a soft paper look by default */
