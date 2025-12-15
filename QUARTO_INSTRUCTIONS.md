@@ -29,30 +29,7 @@ Contact: your.email@example.com
 
 ---
 
-Deploying to GitHub Pages
+Notes:
+- The `render.ps1` script will check that `quarto` is available and will render the homepage to `index.html` in the project root and all other pages into the `Pages/` folder.
 
-1) Create a GitHub repository for this project and push the repository (or use `init-git-commit.ps1` to initialize and commit locally, then add a remote and push).
-
-  Example (PowerShell):
-
-  # initialize, commit
-  .\init-git-commit.ps1
-
-  # add remote and push
-  git remote add origin git@github.com:your-username/your-repo.git
-  git push -u origin main
-
-2) The repository contains a GitHub Actions workflow at `.github/workflows/deploy.yml` that will:
-  - set up Quarto on the Actions runner
-  - run `quarto render` (to generate `_site`)
-  - publish `_site` to GitHub Pages using the Pages Actions
-
-3) After pushing, open your repository on GitHub → Settings → Pages and verify that Pages deployment is active and uses GitHub Actions (the workflow will create the site for you). The publishing source will be the artifact uploaded by the workflow (no branch configuration is required).
-
-Troubleshooting tips:
-- If Quarto rendering fails in the workflow, inspect the workflow run logs under the Actions tab and fix any missing dependencies or source errors.
-- If your site files reference `site_libs` paths, ensure the `_site` built files include the correct relative references (the workflow publishes `_site` directly).
-
-If you'd like, I can:
-- Create the GitHub repository for you (you will need to provide an access token), or
-- Walk you through connecting this local folder to a new GitHub repo and pushing the code now.
+Contact: your.email@example.com
