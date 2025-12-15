@@ -1,0 +1,176 @@
+﻿/* Elegant structural engineering theme: white, gold, maroon */
+:root{
+  --bg:#ffffff; /* page background */
+  --card:#ffffff; /* card background */
+  --gold:#CBA135; /* warm elegant gold */
+  --maroon:#6A0D1E; /* deep maroon */
+  --accent:var(--maroon);
+  --accent-2:var(--gold);
+  --muted:#6b5860; /* soft muted tone */
+  --border:rgba(106,13,30,0.06);
+  --mono: 'Lato', 'Segoe UI', Roboto, Arial, sans-serif;
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+/* Load fonts from Google Fonts for an elegant look */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
+.body-wrapper, body{
+  font-family:var(--mono);
+  background:var(--bg);
+  color:var(--maroon);
+  margin:0;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.site-header{
+  background:linear-gradient(90deg,var(--accent),rgba(106,13,30,0.85));
+  color:var(--accent-2);
+  padding:34px 40px;
+  box-shadow:0 6px 18px rgba(106,13,30,0.08);
+}
+.site-header h1{margin:0;font-weight:700;font-family:var(--serif);font-size:1.9rem;color:var(--gold)}
+.nav-links{margin-top:10px}
+.nav-links a{color:rgba(255,255,255,0.95);margin-right:18px;text-decoration:none;font-weight:600}
+.container{max-width:960px;margin:28px auto;padding:0 20px}
+
+/* Paper-like page frame: resemble 8.5"x11" letter paper on screen */
+.container.paper-frame{
+  /* use viewport-based sizing: make the sheet 60% of viewport width on larger screens */
+  width:60vw;
+  max-width:none;
+  min-height:11in;
+  margin:5vh auto; /* space around the "sheet" */
+  padding:1in 0.9in; /* typical page margin */
+  background:var(--card); /* keep page white */
+  /* rounded up for clarity: use 6px on-screen for a strong paper edge */
+  border:6px solid rgba(106,13,30,0.08); /* screen border */
+  box-shadow:0 12px 36px rgba(16,24,40,0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+  box-sizing:border-box;
+  border-radius:6px;
+}
+
+/* If .paper-frame isn't added to the page wrapper, this gives pages a soft paper look by default */
+.container:not(.no-paper){
+  /* only apply a gentle frame at large sizes to avoid crowding small screens */
+  box-shadow:0 8px 24px rgba(16,24,40,0.04);
+}
+
+/* Responsive: let the page scale down nicely on narrow screens */
+@media (max-width:980px){
+  .container.paper-frame{max-width:calc(100% - 32px);min-height:auto;padding:22px;border-radius:6px}
+}
+
+/* Apply the paper-frame look by default on larger viewports so every page resembles an 8.5x11 sheet */
+@media (min-width:980px){
+  /* make the container/sheet 60% of the viewport width on desktop */
+  .container{
+    width:60vw;
+    max-width:none;
+    min-height:11in;
+    padding:1in 0.9in;
+    background:var(--card);
+    /* rounded up for clarity: use 6px on-screen */
+    border:6px solid rgba(106,13,30,0.08);
+    box-shadow:0 12px 36px rgba(16,24,40,0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+    box-sizing:border-box;
+    border-radius:6px;
+  }
+}
+
+/* Quarto-specific wrapper: ensure main document area looks like a sheet of paper */
+@media (min-width:980px){
+  #quarto-content{
+    width:60vw;
+    max-width:none;
+    margin:5vh auto;
+    padding:0; /* padding is applied to the inner main to better control page margins */
+    box-sizing:border-box;
+  }
+  /* apply the visual "sheet" to the document content area itself */
+  #quarto-document-content{
+    min-height:11in;
+    padding:1in 0.9in;
+    background:var(--card);
+    /* rounded up for clarity: use 6px on-screen */
+    border:6px solid rgba(106,13,30,0.08);
+    box-shadow:0 12px 36px rgba(16,24,40,0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+    box-sizing:border-box;
+    border-radius:6px;
+  }
+}
+
+/* Opt-out: add `class: no-paper` in a page's YAML/front-matter to remove the paper frame on that page */
+.no-paper #quarto-document-content{
+  padding:inherit !important;
+  border:none !important;
+  box-shadow:none !important;
+  min-height:auto !important;
+}
+
+/* Print: force letter size and remove screen-specific shadows */
+@media print{
+  @page{size:letter; margin:0.5in}
+  /* use 3px for print border to match proportions and print cleanly */
+  .container.paper-frame, #quarto-document-content{box-shadow:none;border:3px solid rgba(0,0,0,0.1);min-height:11in;margin:0;padding:0.7in}
+  /* avoid printing large decorative elements like header background */
+  #quarto-header, .site-header{page-break-after:avoid}
+}
+h2, h1{font-family:var(--serif)}
+.card{background:var(--card);border:1px solid var(--border);padding:22px;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.04);border-left:4px solid var(--accent);}
+h1,h2{color:#0b1320}
+.link-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:14px 0}
+.link-card{background:linear-gradient(180deg,rgba(203,161,53,0.06),transparent);padding:14px;border-radius:8px;border:1px solid rgba(203,161,53,0.12);}
+.link-card a{color:var(--maroon);font-weight:700;text-decoration:none}
+/* subtle structural motif */
+.accent-rule{height:4px;background:linear-gradient(90deg,var(--maroon),var(--gold));border-radius:4px;margin:18px 0}
+footer{color:var(--muted);font-size:0.95rem;margin:34px 0;text-align:center}
+
+/* Generic link & button styles */
+a{color:var(--maroon);text-decoration:underline;color:var(--maroon);font-weight:600}
+a:hover{color:var(--accent-2);text-decoration:none}
+
+.btn{display:inline-block;padding:10px 16px;border-radius:6px;border:1px solid var(--accent);background:transparent;color:var(--maroon);font-weight:700;text-decoration:none}
+.btn--primary{background:var(--maroon);color:white;border-color:var(--maroon)}
+.btn--gold{background:var(--gold);color:var(--maroon);border-color:rgba(203,161,53,0.9)}
+.btn:hover{opacity:0.95;transform:translateY(-1px);transition:all 0.12s ease}
+
+blockquote{border-left:4px solid var(--gold);padding-left:16px;color:var(--muted);font-style:italic;background:linear-gradient(90deg, rgba(203,161,53,0.02), transparent);border-radius:4px;padding:12px 14px}
+
+/* Responsive tweaks */
+@media (max-width:520px){
+  .site-header{padding:20px}
+  .site-header h1{font-size:1.4rem}
+  .container{padding:0 14px}
+}
+
+/* Profile photo style used in About page */
+.profile-photo{width:220px;max-width:40%;border-radius:8px;box-shadow:0 8px 24px rgba(16,24,40,0.08);border:2px solid var(--gold);display:block;margin:6px 0 12px 18px;float:right}
+@media (max-width:720px){.profile-photo{float:none;margin:14px auto;display:block;width:56%;max-width:260px}}
+
+/* Quarto/Bootstrap navbar overrides: ensure top menu uses maroon theme */
+#quarto-header .navbar{
+  background: linear-gradient(90deg,var(--maroon), rgba(106,13,30,0.9));
+  border-bottom: 1px solid rgba(106,13,30,0.06);
+  box-shadow: 0 6px 18px rgba(106,13,30,0.06);
+}
+#quarto-header .navbar .navbar-title{
+  color:var(--gold);font-family:var(--serif);font-weight:700;font-size:1.1rem;
+}
+#quarto-header .navbar .nav-link{
+  color:rgba(255,255,255,0.95);font-weight:600;padding:8px 12px;border-radius:6px;margin-right:6px;
+}
+#quarto-header .navbar .nav-link:hover{
+  background: linear-gradient(90deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));text-decoration:none;color:var(--gold);
+}
+#quarto-header .navbar .nav-link.active{
+  background: rgba(255,255,255,0.06);color:var(--gold);
+}
+#quarto-header .navbar-toggler{border-color:rgba(255,255,255,0.18)}
+#quarto-header .navbar-toggler-icon{filter:invert(1) saturate(0) brightness(1.4)}
+
+/* Center figure images (e.g., Figure 1, Figure 2) */
+img[alt^="Figure"]{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
