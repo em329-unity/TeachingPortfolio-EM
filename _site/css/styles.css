@@ -28,7 +28,7 @@
   padding:34px 40px;
   box-shadow:0 6px 18px rgba(106,13,30,0.08);
 }
-.site-header h1{margin:0;font-weight:700;font-family:var(--serif);font-size:0.1rem;color:var(--gold)}
+.site-header h1{margin:0;font-weight:700;font-family:var(--serif);font-size:1rem;color:var(--gold)}
 .nav-links{margin-top:10px}
 .nav-links a{color:rgba(255,255,255,0.95);margin-right:18px;text-decoration:none;font-weight:600}
 .container{max-width:960px;margin:28px auto;padding:0 20px}
@@ -137,7 +137,7 @@ blockquote{border-left:4px solid var(--gold);padding-left:16px;color:var(--muted
 /* Responsive tweaks */
 @media (max-width:520px){
   .site-header{padding:20px}
-  .site-header h1{font-size:1.4rem}
+  .site-header h1{font-size:1rem}
   .container{padding:0 14px}
 }
 
