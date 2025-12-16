@@ -152,7 +152,7 @@ blockquote{border-left:4px solid var(--gold);padding-left:16px;color:var(--muted
   box-shadow: 0 6px 18px rgba(106,13,30,0.06);
 }
 #quarto-header .navbar .navbar-title{
-  color:var(--gold);font-family:var(--serif);font-weight:700;font-size:1.1rem;
+  color:var(--gold);font-family:var(--serif);font-weight:700;font-size:1rem;
 }
 #quarto-header .navbar .nav-link{
   color:rgba(255,255,255,0.95);font-weight:600;padding:8px 12px;border-radius:6px;margin-right:6px;
